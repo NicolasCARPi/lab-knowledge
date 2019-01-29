@@ -2,6 +2,9 @@
 
 ![fiji](fiji-logo.png)
 
+Authors: Alice Williart (ENS/Institut Curie)
+Nicolas CARPi (Institut Curie)
+
 ## Introduction
 
 Fiji is Just ImageJ, a powerful, open source image analysis tool, with multiple plug-ins and possibilities. It is the swiss knife of image analysis and a must have tool for anyone working with scientific images.
@@ -56,4 +59,4 @@ If you want to look at certain objects only, whose pixel value is above a given 
 
 ## Processing multiple images
 
-If you are doing timelapse or multiple channels, you will have several images you might want to process together. You can put them together in a stack (3D) or hyperstack (4D). In order to do this, you can use **"Image:Stack:Images to stack**. You can then make montages, Z projection (**"Image:Stack:Z project** or **"Image:Stack:3D project**) if one of the dimension is the depth, make a movie if you have timelapses.
+If you are doing timelapse or multiple channels, you will have several images you might want to process together. You can put them together in a stack (3D) or hyperstack (4D or 5D or more). In order to do this, you can use **"Image:Stack:Images to stack**. You can then make montages, Z projection (**"Image:Stack:Z project** or **"Image:Stack:3D project**) if one of the dimension is the depth, make a movie if you have timelapses.
