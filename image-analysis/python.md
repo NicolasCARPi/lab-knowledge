@@ -67,11 +67,78 @@ Check out [this tutorial](https://docs.scipy.org/doc/numpy/user/quickstart.html)
 
 ### Matplotlib
 
+[Matplotlib](https://matplotlib.org/) is the __de facto__ standard for producing graphs. Have a look at their [gallery](https://matplotlib.org/gallery/index.html) it can do pretty much everything you can think of (and more!).
+
+This is what we're gonna use for our project. Check out the [tutorials](https://matplotlib.org/tutorials/index.html) to see how it works.
+
+~~~bash
+pipenv install matplotlib
+~~~
+
+~~~py
+import matplotlib.pyplot as plt
+~~~
+
+Again, we are importing it as an alias to save keystrokes. It's also quite common to import it like this.
+
+Note: [Seaborn](https://seaborn.pydata.org/) is a good visualization library that can be very useful to get an idea of what your data looks like. But it is not designed for calculating things (see [this issue](https://github.com/mwaskom/seaborn/issues/207)).
+
+### Image processing libraries
+
+[Mahotas](https://mahotas.readthedocs.io/) can be used for thresholding among other things.
+[Scikit-image](https://scikit-image.org/) might be more complete. See the [gallery](http://scikit-image.org/docs/stable/auto_examples/).
+
+I have found that `skimage` was good with multidimensional TIFF images, so that's what I use.
+
+~~~bash
+pipenv install mahotas skimage
+~~~
+
+~~~py
+import mahotas as mh
+import skimage.io
+img = skimage.io.imread('path/to/raw.tif')
+~~~
+
 ### Pandas
 
-### Mahotas
+[Pandas](https://pandas.pydata.org/) is a data analysis library. You can think of it like Excel. You load your data in a dataframe and process it any way you want. It is very powerful and you definitely want to get familiar with it.
 
-### Scikit image
+~~~bash
+pipenv install pandas
+~~~
 
+~~~py
+import pandas as pd
+~~~
 
+Again, we are importing it as an alias to save keystrokes. It's also quite common to import it like this.
 
+[This tutorial](https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python) might be more accessible than the official documentation that is a bit thick ;).
+
+## Wrapping up
+
+Our little project could do like this:
+
+* load raw data (scikit-image)
+* process it (extract quantitative data) (mahotas, numpy and friends)
+* store said data in a dataframe (pandas)
+* make figures (matplotlib)
+* process the data (make stats) (pandas and friends)
+* export as .csv/.xlsx (pandas and friends)
+
+Of course Stack Overflow is your friend ;)
+
+## Things to have
+
+* Use a real IDE for editing code, so you have autocompletion, function signatures and more
+* Use a [linter](https://www.pylint.org/) to check code as you write
+* [PEP-8](https://www.python.org/dev/peps/pep-0008/)
+
+## Going further
+
+* Add type hinting and check it with [mypy](http://www.mypy-lang.org/)
+* Make a modular project, create a proper package
+* Create a docker image with your project
+
+Have fun!
