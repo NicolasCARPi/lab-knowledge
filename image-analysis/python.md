@@ -144,6 +144,8 @@ Of course Stack Overflow is your friend! ;)
 * Follow [PEP-8](https://www.python.org/dev/peps/pep-0008/) standard
 * Use a [linter](https://www.pylint.org/) to check code as you write
 
+Optionally you can have a look at the [Jupyter Notebook](https://jupyter.org/) project. It can be useful for visualizing block of codes and running them independently. My opinion is that it gets very quickly hard to manage a big program with it (it's also a PITA with git), but for short things, it can be useful.
+
 ## Going further
 
 * Add type hinting and check it with [mypy](http://www.mypy-lang.org/)
